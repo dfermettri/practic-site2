@@ -1,0 +1,527 @@
+/* Базовый reset стилей */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Шапка сайта (navbar) */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:80px;
+  background: #fff;
+  box-shadow: 0px 10px 25px 0px #0000002B;
+  z-index: 1000;
+}
+
+/* Внутренний контейнер шапки */
+
+.nav-inner {
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Логотип в шапке */
+
+.nav-logo img {
+  width: 190px;
+  height: 40px;
+}
+
+/* Главное меню навигации */
+
+.nav-menu {
+  display: flex;
+  gap: 47px;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size:20px;
+  line-height:32px;
+  vertical-align: bottom;
+  width: 483px;
+  margin: 0 auto;
+}
+
+/* Ссылки меню и анимация фиолетовой полоски при наведении */
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1.2rem;
+  width: 100%;
+  height: 4px;
+  background: #a683ff;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Отступы логотипа и блока с кнопкой */
+
+.nav-logo {
+  padding-left: 30px;
+}
+
+.nav-action {
+    padding-right: 28px;
+    margin-left: auto;
+}
+
+/* Кнопка «Купить» в шапке */
+
+.nav-button {
+  all: unset;
+  cursor: pointer;
+  background: #ff4136;
+  border-radius: 4px;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 28px;
+  text-align: center;
+}
+
+.nav-button svg {
+  fill: #fff;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+/* Блок с баннером (Заголовок страницы) */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    padding: 113px 30px 150px 30px;
+}
+
+/* Контейнер баннера и заголовка */
+
+.hero-inner {
+    padding: 0;
+    position:relative;
+    margin:0 auto;
+    width: 1290px;
+    height: 508px;
+}
+
+.hero-inner img {
+    width: 1290px;
+    height:508px;
+    display:block;
+    border-radius:10px;
+}
+
+/* Заголовок поверх баннера */
+
+.hero-title {
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+    bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size:48px;
+  line-height:127%;
+  vertical-align: bottom;
+  color:white;
+}
+
+/* Стрелки слайдера под баннером */
+
+.slider-btn-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 40px 30px;
+}
+
+/* круглая кнопка с тенью */
+.slider-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 25px 0px #0000002B;
+}
+
+
+/* стрелка внутри кнопки */
+.slider-icon path {
+    fill: none;
+    stroke: #828282;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+
+/* Секция с карточками (для товаров) */
+
+.rectangle-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom:100px;
+}
+
+/* Карточка товара */
+
+.rectangle {
+    width:300px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0px 10px 25px 0px #0000002B;
+    position:relative;
+}
+
+.rectangle-photo {
+    width:100%;
+    height:202px;
+    object-fit:cover;
+    display:block;
+    position:relative;
+    z-index:1;
+}
+
+.rectangle-background {
+    background-color:white;
+    width:100%;
+    height:199px;
+    border-radius:10px;
+    position:relative;
+    margin-top:-10px;
+    z-index:2;
+}
+
+/* Подвал сайта */
+
+footer {
+  display: grid;
+  grid-template-columns: 270px repeat(3, 1fr);
+  column-gap: 80px;
+  align-items: flex-start;
+  background-color: white;
+  min-height:270px;
+  padding: 0px 30px;
+}
+
+/* Левая колонка подвала: логотип и контакты */
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  padding-bottom:34px;
+  margin-top:52px;
+}
+
+.footer-left img {
+    width:190px;
+    height:40px;
+    padding-bottom:34px;
+}
+
+/* Телефон и e‑mail в подвале */
+
+.footer-number {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    color:#A993FF;
+    padding-bottom:13px;
+}
+
+.footer-email {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    vertical-align: bottom;
+    color:#828282;
+}
+
+/* Колонки ссылок в подвале */
+
+.footer-col {
+    margin-top:58px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    vertical-align: bottom;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Нижняя фиолетовая линия под сайтом */
+
+.line {
+    width:100%;
+    height:4px;
+    background-color:#A993FF;
+}
+
+/* Страница с каталогом */
+
+/* Банер сверху */
+
+.catalog-hero-section {
+    background-color:rgba(132, 101, 255, 0.17);
+    width:1350px;
+    height: 362px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* Заголовок в банере */
+
+.catalog-title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 127%;
+    letter-spacing: 0%;
+    text-align: center;
+    color:#283C63;
+    padding-top:80px;
+}
+
+/* Каталог товаров */
+
+.catalog-main-section {
+    padding:48px 30px 84px 30px;
+    display:grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap:30px;
+}
+
+/* Банер слева в каталоге */
+
+.catalog-banner {
+    background-color: #fff;
+    width: 300px;
+    height: 850px;
+    opacity: 1;
+    top: 310px;
+    left: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px 0px #0000002B;
+}
+
+/* Карточки товаров справа */
+
+.catalog-rectangle-section {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: space-between;
+    gap:30px;
+}
+
+
+.nav-burger {
+  display: none;
+}
+
+
+@media (max-width: 320px) {
+
+  /* Шапка */
+  .navbar { height: 64px; }
+  .nav-inner {
+    max-width: 100%;
+    height: 64px;
+    padding: 0 12px;
+  }
+
+  .nav-logo { padding-left: 0; }
+  .nav-logo img { width: 140px; height: auto; }
+
+  .nav-action { padding-right: 0; margin-left: 0; }
+  .nav-button { font-size: 14px; padding: 8px 12px; gap: 8px; }
+
+  /* Прячем десктоп-меню на 320 */
+   .nav-menu { display: none; }
+  .nav-menu.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 64px; /* высота моб. navbar */
+    box-shadow: 0px 10px 25px 0px #0000002B;
+  }
+  .nav-inner { position: relative; }
+
+  /* Бургер (просто отображаем иконку) */
+  .nav-burger {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+  }
+  .nav-burger span {
+    width: 22px;
+    height: 2px;
+    background: #283C63;
+    border-radius: 2px;
+    display: block;
+  }
+
+  /* Главный баннер (main.html) */
+  .hero-section { padding: 84px 12px 40px; }
+  .hero-inner {
+    width: 100%;
+    height: auto;
+  }
+  .hero-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .hero-title {
+    left: 12px;
+    bottom: 12px;
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  /* Кнопки слайдера */
+  .slider-btn-section { padding: 0 12px 20px; }
+  .slider-btn { width: 44px; height: 44px; }
+
+  /* Карточки товаров, видно только 1 + переключение на кнопки */
+  .slider-viewport{
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 0 60px 0;
+  }
+
+  .rectangle-section{
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0;
+    transition: transform .3s ease;
+    will-change: transform;
+  }
+
+  .rectangle{
+    flex: 0 0 300px;
+  }
+
+  .rectangle-photo { height: 180px; }
+
+  /* Каталог (catalog.html) */
+  .catalog-hero-section {
+    width: 100%;
+    height: 220px;
+    padding: 0 12px;
+  }
+  .catalog-title {
+    font-size: 24px;
+    padding-top: 64px; /* под фикс. шапку */
+  }
+
+  .catalog-main-section {
+    padding: 24px 12px 60px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .catalog-banner {
+    width: 100%;
+    height: 220px;
+  }
+  .catalog-rectangle-section {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    gap: 16px;
+  }
+
+  /* Подвал */
+  footer {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    column-gap: 0;
+    padding: 24px 12px;
+  }
+  .footer-left { margin-top: 0; padding-bottom: 0; }
+  .footer-left img { padding-bottom: 16px; }
+  .footer-col { margin-top: 0; gap: 8px; }
+}
