@@ -52,6 +52,7 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 3px solid #F2F2F2;
 }
 
 /* Лого в шапке */
@@ -94,7 +95,6 @@ ul, ol {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +115,7 @@ ul, ol {
 
 /* Когда чекбокс “включён” — показываем поле */
 .nav-find-toggle:checked ~ .nav-find-input {
-  width: 200px;              /* нужная ширина */
+  width: 200px;              /* ширина поисковой строки */
   padding: 4px 6px;
   border-color: #ccc;
 }
@@ -137,4 +137,12 @@ ul, ol {
   opacity: 1;
   border: 2px solid #FF69DA;
   color:#FF69DA;
+}
+
+.hero-section {
+  padding-top: 136px;
+}
+
+.hero-block {
+  background-color:#F2F2F2;
 }
