@@ -141,8 +141,56 @@ ul, ol {
 
 .hero-section {
   padding-top: 136px;
+  padding-left: 132px;
+  padding-right: 132px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "title title title"
+    "contact map media";
+  gap: 24px;
 }
 
 .hero-block {
   background-color:#F2F2F2;
 }
+
+.hero-title {
+ grid-area: title;
+ height:206px;
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+ background-color:#F7F7F7;
+}
+
+.hero-title h1 {
+  padding-left: 60px;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 5.6em;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+ .hero-block {
+  height:354px;
+  border-radius: 32px;
+ }
+
+ .hero-block-title {
+  padding:40px 40px 0 40px;
+  display:flex;
+  justify-content:space-between;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 1.63em;
+  line-height: 120%;
+  letter-spacing: -2%;
+ }
+
+.hero-contact { grid-area: contact; }
+.hero-map { grid-area: map; }
+.hero-media { grid-area: media; } 
