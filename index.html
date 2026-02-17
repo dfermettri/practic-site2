@@ -22,73 +22,196 @@
             <li class="nav-menu-link">Журнал</li>
             <li class="nav-menu-link">Присоединиться</li>
         </ul>
-        <form class="nav-find">
-            <input
-                type="checkbox"
-                id="nav-find-toggle"
-                class="nav-find-toggle"
-              >
-            <label class="nav-find-button" for="nav-find-toggle">
-                <img src="ui-components/loupe.svg" alt="logo" />
-            </label>
-            <input
-                type="text"
-                class="nav-find-input"
-                placeholder="Поиск по сайту">
-        </form>
-        <button class="nav-button">
-            Хочу помочь
-        </button>
+        <div class="nav-right">
+            <form class="nav-find">
+                <input
+                    type="checkbox"
+                    id="nav-find-toggle"
+                    class="nav-find-toggle"
+                  >
+                <label class="nav-find-button" for="nav-find-toggle">
+                    <img src="ui-components/loupe.svg" alt="logo" />
+                </label>
+                <input
+                    type="text"
+                    class="nav-find-input"
+                    placeholder="Поиск по сайту">
+            </form>
+            <button class="nav-help-button">
+                Хочу помочь
+            </button>
+        </div>
     </nav>
 
     <section class="hero-section">
         <div class="hero-title">
             <h1>Контакты</h1>
-            <svg width="779"
+        <svg class="hero-background-img" 
+            width="779"
             height="206"
             viewBox="0 0 779 206"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
                 <path d="M777.614 49.3711L569.53 35.4135L634.379 87.4724L403.749 234.694C381.172 186.283 405.447 132.266 431.038 75.3196L434.281 68.0951C445.039 44.6576 456.242 20.2222 463.574 -4.5719L463.397 -4.45886C478.748 -55.0863 461.434 -109.983 409.872 -151.376C324.069 -220.256 175.541 -226.057 78.7972 -164.3C-17.9469 -102.544 -26.8427 3.74707 58.9603 72.627C121.701 122.993 217.945 139.582 302.988 120.751C279.649 190.462 276.421 267.501 370.713 343.195L378.985 349.835L703.3 142.81L778.143 202.891L777.607 49.3754L777.614 49.3711ZM148.667 -108.211C201.975 -142.24 283.82 -139.046 331.105 -101.087C378.39 -63.128 373.478 -4.56226 320.17 29.4666C266.863 63.4954 185.024 60.3064 137.739 22.3475C90.4541 -15.6114 95.3596 -74.1821 148.667 -108.211Z" fill="#F1F1F1"/>
-            </svg>
+        </svg>
 
         </div>
         <div class="hero-block hero-contact">
             <div class="hero-block-title">
-                Для вопросов и предложений
+                <p>Для вопросов и предложений</p>
                 <img src="ui-components/hero-contact-logo.svg" alt="logo"/>
             </div>
-            <ul class="hero-block-menu">
-                <li>Пн-пт с 10:00 до 18:00</li>
-                <li>+7 (499) 110-32-30</li>
-                <li>hello@vtoroe.ru</li>
+            <ul class="hero-block-content">
+                <li class="hero-contact-menu-time">Пн-пт с 10:00 до 18:00</li>
+                <div class="hero-contact-menu-contact">
+                    <li>+7 (499) 110-32-30</li>
+                    <li>hello@vtoroe.ru</li>
+                </div>
             </ul>
         </div>
         <div class="hero-block hero-map">
             <div class="hero-block-title">
-                Адрес офиса и мастерской
+                <p>Адрес офиса и мастерской</p>
                 <img src="ui-components/hero-map-logo.svg" alt="logo"/>
             </div>
-            г. Москва, ул. Годовикова, д. 6
-            <button class="hero-map-button">
-                Показать на карте
-            </button>
+            <div class="hero-block-content">
+                <p class="hero-map-adress">г. Москва, ул. Годовикова, д. 6</p>
+                <button class="hero-map-button">
+                    <span>Показать на карте</span>
+                </button>
+            </div>
         </div>
         <div class="hero-block hero-media">
             <div class="hero-block-title">
-                Социальные медиа
+                <p>Социальные медиа</p>
                 <img src="ui-components/hero-media-logo.svg" alt="logo"/>
             </div>
-            <img src="ui-components/vk-logo.svg"/>
-            <img src="ui-components/tg-logo.svg"/>
-            <img src="ui-components/youtube-logo.svg"/>
-            <img src="ui-components/dzen-logo.svg"/>
-            * Для быстрого ответа в выходные дни пишите в Телеграм или ВКонтакте
+            <div class="hero-block-content">
+                <div class="hero-media-icons">
+                    <img src="ui-components/vk-logo.svg"/>
+                    <img src="ui-components/tg-logo.svg"/>
+                    <img src="ui-components/youtube-logo.svg"/>
+                    <img src="ui-components/dzen-logo.svg"/>
+                </div>
+                <p class="hero-media-text">* Для быстрого ответа в выходные дни пишите в Телеграм или ВКонтакте</p>
+            </div>
         </div>
     </section>
 
-    <main></main>
+    <section class="subscription-block">
+        <h2 class="subscription-block-title">Подпишитесь на рассылку</h2>
+        <p class="subscription-block-description">Раз в неделю вы будете получать письма с историями тех, кому мы помогаем,</p>
+        <p class="subscription-block-description">отчётами и результатами наших акций и сборов, экосоветами и мемами</p>
+        
+        </div>
+        <div class=subscription-block-subscribe>
+            <input
+            type="email"
+            class="subscription-block-email"
+            placeholder="Ваша почта">
+            <button class="subscription-block-button">
+                <p>Подписаться</p>
+            </button>
+        </div>
 
-    <footer></footer>
+        <p class="subscription-block-conditions">Подписываясь на рассылку, вы соглашаетесь с условиями</p>
+        <p class="subscription-block-privacy">Политики конфиденциальности</p>
+    </section>
+
+    <footer>
+
+        <div class="footer-block-section">
+            <div class="footer-logo">
+                <img src="ui-components/logo.svg" alt="logo" />
+            </div>
+            <div class="footer-block footer-block1">
+                <ul>
+                    <li class="footer-block-title">Фонд</li>
+
+                    <li class="footer-block-text">О фонде</li>
+                    <li class="footer-block-text">Команда</li>
+                    <li class="footer-block-text">Благотворительность</li>
+                    <li class="footer-block-text">Переработка</li>
+                    <li class="footer-block-text">База знаний</li>
+                    <li class="footer-block-text">Волонтёрам</li>
+                    <li class="footer-block-text">Документы и отчёты</li>
+                    <li class="footer-block-text">Вакансии</li>
+                    <li class="footer-block-text">Контакты</li>
+                    <li class="footer-block-text">Для СМИ и блогеров</li>
+                    <li class="footer-block-text">Мерч</li>
+                </ul>
+            </div>
+
+            <div class="footer-block footer-block2">
+                <ul>
+                    <li class="footer-block-title">Сдать одежду</li>
+
+                    <li class="footer-block-text">Как сдать и куда привезти</li>
+                    <li class="footer-block-text">Вывоз курьером</li>
+                    <li class="footer-block-text">Правила сбора вещей</li>
+                    <li class="footer-block-text">Как вещи помогают</li>
+                    <li class="footer-block-text">Я случайно опустил вещь в контейнер</li>
+                </ul>
+            </div>
+
+            <div class="footer-block footer-block3">
+                <ul>
+                    <li class="footer-block-title">Получить помощь</li>
+
+                    <li class="footer-block-text">Где получить вещевую помощь</li>
+                </ul>
+            </div>
+
+            <div class="footer-block footer-block4">
+                <ul>
+                    <li class="footer-block-title">Компаниям</li>
+
+                    <li class="footer-block-text">Корпоративным партнёрам</li>
+                    <li class="footer-block-text">Программа для фешн-ритейла</li>
+                    <li class="footer-block-text">Программа для девелоперов и управляющих компаний</li>
+                    <li class="footer-block-text">Сдать стоки и остатки</li>
+                    <li class="footer-block-text">Установить контейнер</li>
+                    <li class="footer-block-text">Заказать мероприятие фонда</li>
+                </ul>
+            </div>
+
+            <div class="footer-block footer-block5">
+                <ul>
+                    <li class="footer-block-title">Поддержать фонд</li>
+
+                    <li class="footer-block-text">Оформить пожертвование</li>
+                    <li class="footer-block-text">Актуальная помощь сейчас</li>
+                </ul>
+            </div>
+
+            <div class="footer-block footer-block6">
+                <ul>
+                    <li class="footer-block-title">Журнал</li>
+
+                    <li class="footer-block-text">Новости</li>
+                    <li class="footer-block-text">Подкаст</li>
+                </ul>
+                <div class="footer-media-icons">
+                    <img src="ui-components/vk-logo.svg"/>
+                    <img src="ui-components/tg-logo.svg"/>
+                    <img src="ui-components/youtube-logo.svg"/>
+                    <img src="ui-components/dzen-logo.svg"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-line"></div>
+
+        <div class="footer-info">
+            <div class="footer-info-left">
+                <p>Благотворительный фонд «Второе дыхание»</p>
+                <p>© 2015–2023</p>
+            </div>
+            <div class="footer-info-right">
+                <p>Конфиденциальность</p>
+                <p>Публичная оферта</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
