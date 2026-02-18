@@ -323,12 +323,11 @@ ul, ol {
   font-weight: 600;
   font-size: 22px;
   margin-top: 24px;
+  transition: width 0.25s ease;
 }
 
 .hero-map-button:hover {
   background-color: #f03bbd;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .hero-media { grid-area: media; }
@@ -340,6 +339,17 @@ ul, ol {
   gap: 16px;
   width: auto;
   height: auto;
+}
+
+.hero-media-icons img,
+.footer-media-icons img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hero-media-icons img:hover,
+.footer-media-icons img:hover {
+  transform: scale(1.1);
 }
 
 .hero-media-text {
@@ -415,8 +425,6 @@ ul, ol {
 
 .subscription-block-button:hover {
   background-color: #f03bbd;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .subscription-block-conditions {
@@ -566,19 +574,6 @@ footer {
   gap: 40px;
 }
 
-
-/* ===== ИКОНКИ ===== */
-
-.hero-media-icons img,
-.footer-media-icons img {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.hero-media-icons img:hover,
-.footer-media-icons img:hover {
-  transform: scale(1.2);
-}
 
 
 /* ===== МЕДИАЗАПРОС 768px ===== */
