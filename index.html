@@ -11,7 +11,7 @@
     <title>Второе дыхание</title>
 </head>
 <body>
-
+    <input type="checkbox" id="nav-find-toggle" class="nav-find-toggle">
     <input type="checkbox" id="burger-toggle" class="burger-toggle">
 
     <nav class="navbar">
@@ -28,32 +28,36 @@
         </ul>
 
         <div class="nav-right">
-            <form class="nav-find">
-                <input
-                    type="checkbox"
-                    id="nav-find-toggle"
-                    class="nav-find-toggle"
-                >
-                <label class="nav-find-button" for="nav-find-toggle" aria-label="Поиск">
-                    <img src="ui-components/loupe.svg" alt="" aria-hidden="true" />
-                </label>
-                <input
-                    type="text"
-                    class="nav-find-input"
-                    placeholder="Поиск по сайту"
-                    aria-label="Поиск по сайту"
-                >
-            </form>
+            <label class="nav-find-button" for="nav-find-toggle" aria-label="Поиск">
+                <img src="ui-components/loupe.svg" alt="" aria-hidden="true" />
+            </label>
             <button class="nav-help-button" type="button">
                 Хочу помочь
             </button>
-
             <label class="burger-button" for="burger-toggle" aria-label="Открыть меню">
                 <span></span>
                 <span></span>
             </label>
         </div>
     </nav>
+
+    <div class="search-overlay">
+        <div class="search-overlay-inner">
+            <img src="ui-components/loupe.svg" alt="" aria-hidden="true" class="search-overlay-icon" />
+            <input
+                type="text"
+                class="search-overlay-input"
+                placeholder="Поиск по сайту"
+                aria-label="Поиск по сайту"
+                autofocus
+            >
+            <label class="search-overlay-close" for="nav-find-toggle" aria-label="Закрыть поиск">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 6L18 18M6 18L18 6" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </label>
+        </div>
+    </div>
 
     <div class="mobile-menu">
         <ul class="mobile-menu-list">
@@ -63,20 +67,24 @@
             <li class="mobile-menu-link">Журнал</li>
             <li class="mobile-menu-link">Присоединиться</li>
         </ul>
+
+        <div class="mobile-menu-footer">
+            <button class="nav-help-button" type="button">Хочу помочь</button>
+            <div class="hero-media-icons" style="padding-top: 24px;">
+              <a href="#" aria-label="ВКонтакте"><img src="ui-components/vk-logo.svg" alt="ВКонтакте"/></a>
+              <a href="#" aria-label="Telegram"><img src="ui-components/tg-logo.svg" alt="Telegram"/></a>
+              <a href="#" aria-label="YouTube"><img src="ui-components/youtube-logo.svg" alt="YouTube"/></a>
+              <a href="#" aria-label="Дзен"><img src="ui-components/dzen-logo.svg" alt="Дзен"/></a>
+            </div>
+        </div>
     </div>
 
     <section class="hero-section">
         <div class="hero-title">
             <h1>Контакты</h1>
-            <svg class="hero-background-img"
-                width="779"
-                height="206"
-                viewBox="0 0 779 206"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M777.614 49.3711L569.53 35.4135L634.379 87.4724L403.749 234.694C381.172 186.283 405.447 132.266 431.038 75.3196L434.281 68.0951C445.039 44.6576 456.242 20.2222 463.574 -4.5719L463.397 -4.45886C478.748 -55.0863 461.434 -109.983 409.872 -151.376C324.069 -220.256 175.541 -226.057 78.7972 -164.3C-17.9469 -102.544 -26.8427 3.74707 58.9603 72.627C121.701 122.993 217.945 139.582 302.988 120.751C279.649 190.462 276.421 267.501 370.713 343.195L378.985 349.835L703.3 142.81L778.143 202.891L777.607 49.3754L777.614 49.3711ZM148.667 -108.211C201.975 -142.24 283.82 -139.046 331.105 -101.087C378.39 -63.128 373.478 -4.56226 320.17 29.4666C266.863 63.4954 185.024 60.3064 137.739 22.3475C90.4541 -15.6114 95.3596 -74.1821 148.667 -108.211Z" fill="#F1F1F1"/>
-            </svg>
+            <div class="hero-background-img-wrap">
+                <img class="hero-background-img" src="ui-components/hero-background-img.svg" aria-hidden="true"/>
+            </div>
         </div>
 
         <div class="hero-block hero-contact">
@@ -126,10 +134,9 @@
     </section>
 
     <section class="subscription-block">
-        <h2 class="subscription-block-title subscription-block-title--desktop">Подпишитесь на рассылку</h2>
-        <h2 class="subscription-block-title subscription-block-title--mobile">Подпишитесь<br>на рассылку</h2>
-        <p class="subscription-block-description">Раз в неделю вы будете получать письма с историями тех, кому мы помогаем,</p>
-        <p class="subscription-block-description">отчётами и результатами наших акций и сборов, экосоветами и мемами</p>
+        <p class="subscription-block-title subscription-block-title--desktop">Подпишитесь на рассылку</p>
+        <p class="subscription-block-title subscription-block-title--mobile">Подпишитесь<br>на рассылку</p>
+        <p class="subscription-block-description">Раз в неделю вы будете получать письма с историями тех, кому мы помогаем, отчётами и результатами наших акций и сборов, экосоветами и мемами</p>
 
         <div class="subscription-block-subscribe">
             <input
@@ -144,8 +151,10 @@
         </div>
 
         <p class="subscription-block-conditions">
-            Подписываясь на рассылку, вы соглашаетесь с условиями
-            <span class="subscription-block-privacy">Политики конфиденциальности</span>
+          Подписываясь на рассылку, вы соглашаетесь с
+          <span class="subscription-block-conditions-nowrap">
+            условиями&nbsp;<span class="subscription-block-privacy">Политики конфиденциальности</span>
+          </span>
         </p>
     </section>
 
