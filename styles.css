@@ -52,10 +52,13 @@ ul, ol {
   align-items: center;
   justify-content: space-between;
   border-bottom: 3px solid #F2F2F2;
-  padding: 0 132px;
+  padding: 0 8.5em;
 }
 
-.nav-logo {}
+.nav-logo {
+  width: 11em;
+  height: auto;
+}
 
 .nav-menu {
   display: flex;
@@ -94,7 +97,7 @@ ul, ol {
 
 .nav-right {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 32px;
 }
 
@@ -147,7 +150,6 @@ ul, ol {
   height: auto;
   border-radius: 12px;
   padding: 20px 24px;
-  margin-right: 132px;
   border: 2px solid #FF69DA;
   color: #FF69DA;
   background: #FF69DA14;
@@ -168,34 +170,40 @@ ul, ol {
 
 .burger-button {
   display: none;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
   gap: 5px;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   z-index: 1001;
 }
 
 .burger-button span {
   display: block;
-  width: 28px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
   height: 2px;
   background-color: #222;
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.burger-button span:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 5px));
+}
+
+.burger-button span:nth-child(2) {
+  transform: translate(-50%, calc(-50% + 5px));
 }
 
 .burger-toggle:checked + .navbar .burger-button span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .burger-toggle:checked + .navbar .burger-button span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-toggle:checked + .navbar .burger-button span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .burger-toggle:checked ~ .mobile-menu {
@@ -574,9 +582,13 @@ footer {
   gap: 40px;
 }
 
+.footer-info-right p:hover {
+  color: #FF69DA;
+}
 
 
-/* ===== МЕДИАЗАПРОС 768px ===== */
+
+/* ===== МОБИЛКА 768px ===== */
 
 @media (max-width: 768px) {
 
@@ -600,8 +612,8 @@ footer {
   }
 
   .nav-find-button {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: #F7F7F7;
     display: flex;
@@ -609,9 +621,14 @@ footer {
     justify-content: center;
   }
 
+  .nav-find-button img {
+    height: 24px;
+    width: 24px;
+  }
+
   .burger-button {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: #F7F7F7;
     display: flex;
